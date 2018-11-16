@@ -2,6 +2,7 @@
 ## Create a cache-function with the methods will be used in the function
 ## which calculates the inverse of a matrix.
 
+## Cache the matrix and assing the methods:
 makeCacheMatrix <- function(x = matrix()) {
     m <- NULL
     set <- function(y) {
@@ -16,8 +17,8 @@ makeCacheMatrix <- function(x = matrix()) {
          getInverse = getInverse)
 }
 
+## Return a matrix that is the inverse of 'x'
 cacheSolve <- function(x, ...) {
-    ## Return a matrix that is the inverse of 'x'
     if(!require('matlib')){
         install.packages('matlib',method=inv)
         library('matlib')
